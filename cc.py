@@ -347,6 +347,7 @@ def post(event,proxy_type):
                     print(response)
                 s.close()
             except:
+                print("close try")
                 s.close()
         except:
             s.close()
