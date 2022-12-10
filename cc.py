@@ -334,6 +334,7 @@ def post(event,proxy_type):
 			try:
 				for _ in range(100):
 					sent = s.send(str.encode(request))
+                    print("Send start")
 					if not sent:
 						proxy = Choice(proxies).strip().split(":")
 						break
