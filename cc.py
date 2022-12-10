@@ -330,7 +330,7 @@ def post(event,proxy_type):
                 s.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
             s.connect((str(target), int(port)))
             if protocol == "https":
-                ctx = ssl.SSLContext()
+                ctx = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
                 s = ctx.wrap_socket(s,server_hostname=target)
             try:
                 for _ in range(100):
