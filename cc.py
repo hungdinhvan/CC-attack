@@ -177,7 +177,7 @@ def GenReqHeader(method):
         # Post with form        
         # content = "Content-Type: application/x-www-form-urlencoded\r\nX-requested-with:XMLHttpRequest\r\n"
         # Post with json
-        content = "Content-Type: application/json;charset=UTF-8\r\n"
+        content = "Content-Type: application/json\r\n\r\n"
 
         refer = "Referer: http://"+ target + path + "\r\n"
         user_agent = "User-Agent: " + getuseragent() + "\r\n"
@@ -192,7 +192,7 @@ def GenReqHeader(method):
         # data = data.replace("demo_name", fake.name())
         # data = data.replace("demo_address", fake.address())
         # data = data.replace("demo_phone", fake.phone_number())
-        header = post_host + accept + refer + content + user_agent + length + "\r\n" + data + "\r\n\r\n"
+        header = post_host + accept + refer + content + user_agent + length + "\r\n\r\n" + data + "\r\n\r\n"
     return header
 
 def ParseUrl(original_url):
