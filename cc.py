@@ -333,7 +333,7 @@ def post(event,proxy_type):
 
             if protocol == "https":
                 print("enable socket")
-                ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+                ctx = ssl.SSLContext(ssl.PROTOCOL_TLS)
                 s = ctx.wrap_socket(s,server_hostname=target)
                 print("Debug enable socket")
             print("try start")
