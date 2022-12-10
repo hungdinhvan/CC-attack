@@ -341,7 +341,7 @@ def post(event,proxy_type):
                 print("start send:")
                 for _ in range(100):
                     print(f"begin sending...{_}")
-                    sent = s.send(str.encode(request))
+                    sent = s.sendall(request)
                     print("Send start")
                     if not sent:
                         print("Not send")
