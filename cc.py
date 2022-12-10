@@ -336,6 +336,7 @@ def post(event,proxy_type):
                 ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
                 s = ctx.wrap_socket(s,server_hostname=target)
             try:
+                print("start send:")
                 for _ in range(100):
                     print(f"begin sending...{_}")
                     sent = s.send(json.dumps(request))
