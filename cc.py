@@ -181,12 +181,13 @@ def GenReqHeader(method):
 
         refer = "Referer: http://"+ target + path + "\r\n"
         user_agent = "User-Agent: " + getuseragent() + "\r\n"
-        # accept = Choice(acceptall)
-        accept = "Accept: */*\r\n"
+        accept = Choice(acceptall)
+        # accept = "Accept: */*\r\n"
         if data == "":# You can enable customize data
             data = str(random._urandom(16))
         data_json = json.dumps(data)
         length = "Content-Length: "+str(len(data_json))+" \r\nConnection: Keep-Alive\r\n"
+        host = "Host: " + target + "\r\n"
         if cookies != "":
             length += "Cookies: "+str(cookies)+"\r\n"
         #header = post_host + accept + refer + content + user_agent + length + "\n" + data + "\r\n\r\n"
@@ -194,7 +195,7 @@ def GenReqHeader(method):
         data = data.replace("demo_name", fake.name())
         data = data.replace("demo_address", fake.address())
         data = data.replace("demo_phone", fake.phone_number())
-        header = post_host + accept + refer + content + user_agent + length + "\r\n\r\n" + data_json + "\r\n\r\n"
+        header = post_host + accept + refer + content + user_agent + host + length + "\r\n\r\n" + data_json + "\r\n\r\n"
         print(header)
     return header
 
