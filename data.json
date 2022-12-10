@@ -3,7 +3,7 @@
     "default": {
       "first_name": "demo_name",
       "phone_number": "demo_phone",
-      "address": "demo_address"	
+      "address": "demo_address"
     },
     "custom": {
       "checkbox": {
@@ -38,5 +38,4 @@
       "type": "input"
     }
   ]
- 
 }
