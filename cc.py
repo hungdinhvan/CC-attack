@@ -342,6 +342,7 @@ def post(event,proxy_type):
                     sent = s.send(json.dumps(request))
                     print("Send start")
                     if not sent:
+                        print("Not send")
                         proxy = Choice(proxies).strip().split(":")
                         break
                     response = s.recv(4096)
