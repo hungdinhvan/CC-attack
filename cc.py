@@ -189,9 +189,9 @@ def GenReqHeader(method):
             length += "Cookies: "+str(cookies)+"\r\n"
         #header = post_host + accept + refer + content + user_agent + length + "\n" + data + "\r\n\r\n"
         data = json.dumps(data)
-        data = data.replace("demo_name", fake.name())
-        data = data.replace("demo_address", fake.address())
-        data = data.replace("demo_phone", fake.phone_number())
+        # data = data.replace("demo_name", fake.name())
+        # data = data.replace("demo_address", fake.address())
+        # data = data.replace("demo_phone", fake.phone_number())
         header = post_host + accept + refer + content + user_agent + length + "\r\n" + data + "\r\n\r\n"
     return header
 
