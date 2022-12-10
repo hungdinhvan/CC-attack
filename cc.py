@@ -173,7 +173,8 @@ def GenReqHeader(method):
         useragent = "User-Agent: " + getuseragent() + "\r\n"
         header =  referer + useragent + accept + connection + "\r\n"
     elif method == "post":
-        post_host = "POST " + path + " HTTP/1.1\r\nHost: " + target + "\r\n"
+        # post_host = "POST " + path + " HTTP/1.1\r\nHost: " + target + "\r\n"
+        post_host = "POST " + path + "\r\nHost: " + target + "\r\n"
         # Post with form        
         # content = "Content-Type: application/x-www-form-urlencoded\r\nX-requested-with:XMLHttpRequest\r\n"
         # Post with json
@@ -187,7 +188,7 @@ def GenReqHeader(method):
             data = str(random._urandom(16))
         data_json = json.dumps(data)
         length = "Content-Length: "+str(len(data_json))+" \r\nConnection: Keep-Alive\r\n"
-        host = "Host: " + target + "\r\n"
+        # host = "Host: " + target + ""
         if cookies != "":
             length += "Cookies: "+str(cookies)+"\r\n"
         #header = post_host + accept + refer + content + user_agent + length + "\n" + data + "\r\n\r\n"
@@ -195,7 +196,7 @@ def GenReqHeader(method):
         data = data.replace("demo_name", fake.name())
         data = data.replace("demo_address", fake.address())
         data = data.replace("demo_phone", fake.phone_number())
-        header = post_host + accept + refer + content + user_agent + host + length + "\r\n\r\n" + data_json + "\r\n\r\n"
+        header = post_host + accept + refer + content + user_agent + length + "\r\n\r\n" + data_json + "\r\n\r\n"
         print(header)
     return header
 
