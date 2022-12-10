@@ -333,8 +333,8 @@ def post(event,proxy_type):
 				s = ctx.wrap_socket(s,server_hostname=target)
 			try:
 				for _ in range(100):
-					sent = s.send(str.encode(request))
-                    print("Send start")
+					sent = s.send(json.dumps(request))
+                    # print("Send start")
 					if not sent:
 						proxy = Choice(proxies).strip().split(":")
 						break
