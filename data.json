@@ -1,0 +1,42 @@
+{
+  "form_data": {
+    "default": {
+      "first_name": "demo_name",
+      "phone_number": "demo_phone",
+      "address": "demo_address"	
+    },
+    "custom": {
+      "checkbox": {
+        "checkbox_group_1": []
+      },
+      "variations": {}
+    },
+    "variations": []
+  },
+  "from_url": "https://www.lelabochinhhang.online/",
+  "referrer_url": "",
+  "session_id": "87babe9f-e427-48b1-b8af-73780eae1b31",
+  "field_list": [
+    {
+      "field_name": "first_name",
+      "field_placeholder": "Họ và tên",
+      "type": "input"
+    },
+    {
+      "field_name": "phone_number",
+      "field_placeholder": "Số điện thoại",
+      "type": "input"
+    },
+    {
+      "field_name": "checkbox_group_1",
+      "field_placeholder": "Checkbox Group 1",
+      "type": "checkbox-group"
+    },
+    {
+      "field_name": "address",
+      "field_placeholder": "Địa chỉ",
+      "type": "input"
+    }
+  ]
+ 
+}
