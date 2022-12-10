@@ -188,10 +188,11 @@ def GenReqHeader(method):
         if cookies != "":
             length += "Cookies: "+str(cookies)+"\r\n"
         #header = post_host + accept + refer + content + user_agent + length + "\n" + data + "\r\n\r\n"
+        data = json.dumps(data)
         data = data.replace("demo_name", fake.name())
         data = data.replace("demo_address", fake.address())
         data = data.replace("demo_phone", fake.phone_number())
-        header = post_host + accept + refer + content + user_agent + length + "\n" + json.dumps(data) + "\r\n\r\n"
+        header = post_host + accept + refer + content + user_agent + length + "\r\n" + data + "\r\n\r\n"
     return header
 
 def ParseUrl(original_url):
@@ -341,7 +342,7 @@ def post(event,proxy_type):
                 print("start send:")
                 for _ in range(100):
                     print(f"begin sending...{_}")
-                    sent = s.sendall(request)
+                    sent = s.send(str.encode(request))
                     print("Send start")
                     if not sent:
                         print("Not send")
