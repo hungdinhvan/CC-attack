@@ -347,7 +347,7 @@ def post(event,proxy_type):
                         print("Not send")
                         proxy = Choice(proxies).strip().split(":")
                         break
-                    response = s.recv(4096)
+                    response = s.recv(4096).decode()
                     print(response)
                 s.close()
             except  Exception as e:
