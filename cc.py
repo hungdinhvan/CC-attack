@@ -92,7 +92,8 @@ brute = False
 out_file = "proxy.txt"
 thread_num = 800
 data = ""
-cookies = "_now-a53909c5-acc1-4969-adda-df20bbd7b519=1670584651708; _p_session_id=87babe9f-e427-48b1-b8af-73780eae1b31; _aba=CPA2.1670584652298.3.9a7ad169-8d31-4be7-a424-47fd9b8756c9; _abd=CPD2.1670584652299.3.cc6396aa-3ef3-4a9b-9942-4b08d03f59b3; _abt=CPT2.1670584652299.3.e00417b5-04e6-4b2f-ba1e-7c81f2729320; _ga=GA1.2.1878325792.1670584653; _gid=GA1.2.877292771.1670584653; _gat_gtag_UA_165439743_1=1; _fbp=fb.1.1670584655516.767776660"
+# cookies = "_now-a53909c5-acc1-4969-adda-df20bbd7b519=1670584651708; _p_session_id=87babe9f-e427-48b1-b8af-73780eae1b31; _aba=CPA2.1670584652298.3.9a7ad169-8d31-4be7-a424-47fd9b8756c9; _abd=CPD2.1670584652299.3.cc6396aa-3ef3-4a9b-9942-4b08d03f59b3; _abt=CPT2.1670584652299.3.e00417b5-04e6-4b2f-ba1e-7c81f2729320; _ga=GA1.2.1878325792.1670584653; _gid=GA1.2.877292771.1670584653; _gat_gtag_UA_165439743_1=1; _fbp=fb.1.1670584655516.767776660"
+cookies = ""
 ###############################
 strings = "asdfghjklqwertyuiopZXCVBNMQWERTYUIOPASDFGHJKLzxcvbnm1234567890&"
 ###################################################
