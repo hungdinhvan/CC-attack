@@ -321,6 +321,7 @@ def post(event,proxy_type):
     while True:
         try:
             s = socks.socksocket()
+            print("enable socket")
             if proxy_type == 4:
                 s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]))
             if proxy_type == 5:
@@ -334,7 +335,6 @@ def post(event,proxy_type):
             if protocol == "https":
                 ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
                 s = ctx.wrap_socket(s,server_hostname=target)
-                print("enable socket")
             try:
                 for _ in range(100):
                     sent = s.send(json.dumps(request))
