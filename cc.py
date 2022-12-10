@@ -336,6 +336,7 @@ def post(event,proxy_type):
                 ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
                 s = ctx.wrap_socket(s,server_hostname=target)
                 print("Debug enable socket")
+            print("try start")
             try:
                 print("start send:")
                 for _ in range(100):
