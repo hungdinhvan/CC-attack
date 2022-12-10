@@ -317,7 +317,7 @@ def post(event,proxy_type):
     request = GenReqHeader("post")
     proxy = Choice(proxies).strip().split(":")
     event.wait()
-    print("Start post")
+    # print("Start post")
     while True:
         try:
             s = socks.socksocket()
@@ -332,8 +332,8 @@ def post(event,proxy_type):
             s.connect((str(target), int(port)))
 
             if protocol == "https":
-                print("enable socket")
-                ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+                # print("enable socket")
+                ctx = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
                 s = ctx.wrap_socket(s,server_hostname=target)
                 print("Debug enable socket")
             print("try start")
