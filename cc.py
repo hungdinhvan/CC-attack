@@ -337,7 +337,7 @@ def post(event,proxy_type):
                 s = ctx.wrap_socket(s,server_hostname=target)
             try:
                 for _ in range(100):
-                    print("beging sending...")
+                    print(f"begin sending...{_}")
                     sent = s.send(json.dumps(request))
                     print("Send start")
                     if not sent:
