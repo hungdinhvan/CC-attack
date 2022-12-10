@@ -193,6 +193,7 @@ def GenReqHeader(method):
         # data = data.replace("demo_address", fake.address())
         # data = data.replace("demo_phone", fake.phone_number())
         header = post_host + accept + refer + content + user_agent + length + "\r\n\r\n" + data + "\r\n\r\n"
+        print(header)
     return header
 
 def ParseUrl(original_url):
