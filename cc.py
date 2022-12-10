@@ -174,7 +174,7 @@ def GenReqHeader(method):
         header =  referer + useragent + accept + connection + "\r\n"
     elif method == "post":
         # post_host = "POST " + path + " HTTP/1.1\r\nHost: " + target + "\r\n"
-        post_host = "POST " + path + "\r\nHost: " + target + "\r\n"
+        post_host = "POST " + path + " HTTP/1.1\r\nHost: " + target + "\r\n"
         # Post with form        
         # content = "Content-Type: application/x-www-form-urlencoded\r\nX-requested-with:XMLHttpRequest\r\n"
         # Post with json
