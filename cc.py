@@ -350,8 +350,8 @@ def post(event,proxy_type):
                     response = s.recv(4096)
                     print(response)
                 s.close()
-            except:
-                print("close try")
+            except  Exception as e:
+                print(f"close try {e}")
                 s.close()
         except:
             s.close()
