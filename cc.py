@@ -170,7 +170,8 @@ def GenReqHeader(method):
             connection += "Cookies: "+str(cookies)+"\r\n"
         accept = Choice(acceptall)
         referer = "Referer: "+Choice(referers)+ target + path + "\r\n"
-        useragent = "User-Agent: " + getuseragent() + "\r\n"
+        # useragent = "User-Agent: " + getuseragent() + "\r\n"
+        useragemt = "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36\r\n"
         header =  referer + useragent + accept + connection + "\r\n"
     elif method == "post":
         # post_host = "POST " + path + " HTTP/1.1\r\nHost: " + target + "\r\n"
@@ -178,11 +179,12 @@ def GenReqHeader(method):
         # Post with form        
         # content = "Content-Type: application/x-www-form-urlencoded\r\nX-requested-with:XMLHttpRequest\r\n"
         # Post with json
-        content = "Content-Type: application/json\r\n\r\n"
+        content = "Content-Type: application/json text/plain, */*\r\n"
 
         refer = "Referer: http://"+ target + path + "\r\n"
         user_agent = "User-Agent: " + getuseragent() + "\r\n"
-        accept = Choice(acceptall)
+        # accept = Choice(acceptall)
+        accept = "accept-encoding: gzip, deflate, br\r\naccept-language: en-US,en;q=0.9\r\n"
         # accept = "Accept: */*\r\n"
         if data == "":# You can enable customize data
             data = str(random._urandom(16))

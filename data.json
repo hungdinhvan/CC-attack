@@ -1,21 +1,29 @@
 {
   "form_data": {
     "default": {
-      "first_name": "demo_name",
-      "phone_number": "demo_phone",
-      "address": "demo_address"
+      "first_name": "Hoang Van Thai",
+      "phone_number": "0987654321",
+      "address": "Da nang"
     },
     "custom": {
       "checkbox": {
-        "checkbox_group_1": []
+        "checkbox_group_1": [
+          "Le Labo Another 13, 100ml - 1.275.000đ (Tặng mẫu thử trị giá 129k)"
+        ]
       },
-      "variations": {}
+      "variations": {
+        "checkbox_group_1.cjcxnksh": [
+          {
+            "quantity": 1
+          }
+        ]
+      }
     },
     "variations": []
   },
   "from_url": "https://www.lelabochinhhang.online/",
   "referrer_url": "",
-  "session_id": "87babe9f-e427-48b1-b8af-73780eae1b31",
+  "session_id": "1d223f5b-c470-41c6-b7db-b8f00b8aa93c",
   "field_list": [
     {
       "field_name": "first_name",
@@ -37,5 +45,9 @@
       "field_placeholder": "Địa chỉ",
       "type": "input"
     }
-  ]
+  ],
+  "form_id": "z1xej3zi",
+  "useragent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+  "total_price": 10000,
+  "shipping_fee": 0
 }
